@@ -4,7 +4,8 @@ import React from 'react';
 
 import { Modal, Col, Row, Tab, Nav } from 'react-bootstrap';
 
-import store from '../../images/store.png';
+import StoreImage from '../../images/StoreImage.png';
+import ItemCartButton from '../Buttons&Icons/ItemCartButton';
 
 const Storeitems = () => {
   return (
@@ -14,10 +15,6 @@ const Storeitems = () => {
         <Nav variant='tabs' className='flex-column'>
           <Nav.Item key={1}>
             <Nav.Link eventKey={1}>Item Name 1</Nav.Link>
-          </Nav.Item>
-
-          <Nav.Item key={2}>
-            <Nav.Link eventKey={2}>Item Name 2</Nav.Link>
           </Nav.Item>
         </Nav>
       </Col>
@@ -29,25 +26,13 @@ const Storeitems = () => {
             <Modal.Title>Item Name 1</Modal.Title>
             <Row>
               <Col>
-                <img src={store}></img>
+                <img src={StoreImage} alt={StoreImage}></img>
               </Col>
               <Col>
                 <p>Item Description 1</p>
                 <h3>Item Price 1</h3>
               </Col>
-            </Row>
-          </Tab.Pane>
-
-          <Tab.Pane key={2} eventKey={2}>
-            <Modal.Title>Item Name 2</Modal.Title>
-            <Row>
-              <Col>
-                <img src={store}></img>
-              </Col>
-              <Col>
-                <p>Item Description 2</p>
-                <h3>Item Price 2</h3>
-              </Col>
+              <ItemCartButton />
             </Row>
           </Tab.Pane>
         </Tab.Content>

@@ -25,6 +25,10 @@ const StorePostForm = (props) => {
 
   // Send Request to Post a New Store
   const postStore = () => {
+    console.log('name', name);
+    console.log('image', image);
+    console.log('phone_number', phone_number);
+
     props.PostModalShowing();
   };
 

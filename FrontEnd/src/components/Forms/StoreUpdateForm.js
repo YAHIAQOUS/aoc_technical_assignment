@@ -25,7 +25,11 @@ const StoreUpdateForm = (props) => {
 
   // Send Request to Update a New Store
   const updateStore = () => {
-    props.PostModalShowing();
+    console.log('name', name);
+    console.log('image', image);
+    console.log('phone_number', phone_number);
+
+    props.modalShowing();
   };
 
   return (

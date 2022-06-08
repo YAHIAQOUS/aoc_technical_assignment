@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 
 import StorePostModal from '../Modals/StorePostModal';
 
-const CreateStoreButton = () => {
+const StorePostButton = () => {
   const [showPostModal, setShowPostModal] = useState(false);
   const PostModalShowing = () => {
     setShowPostModal(!showPostModal);
@@ -26,4 +26,4 @@ const CreateStoreButton = () => {
     </>
   );
 };
-export default CreateStoreButton;
+export default StorePostButton;

@@ -2,10 +2,14 @@
 
 import React from 'react';
 
+import CartCard from '../components/Cards/CartCard';
+
 const Cart = () => {
   return (
     <>
-      <h1>Cart Page</h1>
+      <h2>Cart Page</h2>
+
+      <CartCard />
     </>
   );
 };

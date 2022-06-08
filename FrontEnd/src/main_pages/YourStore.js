@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import CreateStoreButton from '../components/Buttons&Icons/CreateStoreButton';
+import StorePostButton from '../components/Buttons&Icons/StorePostButton';
 import YourStoreCard from '../components/Cards/YourStoreCard';
 
 const YourStore = () => {
@@ -10,7 +10,7 @@ const YourStore = () => {
     <>
       <h2>Create and Update Your Online Store</h2>
 
-      <CreateStoreButton />
+      <StorePostButton />
       <YourStoreCard />
     </>
   );
