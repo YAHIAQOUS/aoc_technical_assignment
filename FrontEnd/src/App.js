@@ -11,6 +11,7 @@ import Home from './main_pages/Home';
 import Stores from './main_pages/Stores';
 import YourStore from './main_pages/YourStore';
 import Cart from './main_pages/Cart';
+import YourOrders from './main_pages/YourOrders';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/stores' exact element={<Stores />}></Route>
           <Route path='/yourstore' exact element={<YourStore />}></Route>
           <Route path='/cart' exact element={<Cart />}></Route>
+          <Route path='/orders' exact element={<YourOrders />}></Route>
         </Routes>
       </Router>
 
