@@ -4,10 +4,12 @@ import React from 'react';
 import { useState } from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 
-import StoreImage from '../../images/StoreImage.png';
-import StoreModal from '../Modals/StoreModal';
+import ItemImage from '../../images/ItemImage.png';
+import ItemModal from '../Modals/ItemModal';
+import ItemCartButton from '../Buttons&Icons/ItemCartButton';
+import ItemOrderButton from '../Buttons&Icons/ItemOrderButton';
 
-const StoreCard = () => {
+const CartCard = () => {
   const [showDetailModal, setShowDetailModal] = useState(false);
   const modalShowing = () => {
     setShowDetailModal(!showDetailModal);
@@ -17,7 +19,7 @@ const StoreCard = () => {
     <>
       {/* Store Modal */}
       {showDetailModal && (
-        <StoreModal
+        <ItemModal
           showDetailModal={showDetailModal}
           modalShowing={modalShowing}
         />
@@ -29,10 +31,14 @@ const StoreCard = () => {
             // key={}
             style={{ width: '30rem' }}
             className='text-center'>
-            <Card.Img src={StoreImage} onClick={modalShowing} />
+            <Card.Img src={ItemImage} onClick={modalShowing} />
 
             <Card.Body>
-              <Card.Title>Store Name</Card.Title>
+              <Card.Title>
+                Item Name
+                <ItemCartButton />
+                <ItemOrderButton />
+              </Card.Title>
             </Card.Body>
           </Card>
         </Col>
@@ -40,4 +46,4 @@ const StoreCard = () => {
     </>
   );
 };
-export default StoreCard;
+export default CartCard;

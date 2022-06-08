@@ -3,10 +3,10 @@
 import React from 'react';
 import { Modal, Row, Col } from 'react-bootstrap';
 
-import StoreUpdateItems from '../Forms/StoreUpdateItems';
+import StoreUpdateItems from './StoreUpdateItems';
 import StoreUpdateForm from '../Forms/StoreUpdateForm';
 
-const YourStoreModal = (props) => {
+const StoreUpdateModal = (props) => {
   return (
     <>
       <Modal
@@ -20,13 +20,13 @@ const YourStoreModal = (props) => {
         <Modal.Body>
           {/* Update Items Form */}
           <Row>
-            <StoreUpdateItems />
+            <StoreUpdateItems modalShowing={props.modalShowing} />
           </Row>
 
           {/* Update Store Form */}
           <Row>
             <Col style={{ position: 'fixed', bottom: '20px', width: '20%' }}>
-              <StoreUpdateForm />
+              <StoreUpdateForm modalShowing={props.modalShowing} />
             </Col>
           </Row>
         </Modal.Body>
@@ -43,4 +43,4 @@ const YourStoreModal = (props) => {
     </>
   );
 };
-export default YourStoreModal;
+export default StoreUpdateModal;

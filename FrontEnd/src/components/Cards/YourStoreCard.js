@@ -4,8 +4,9 @@ import React from 'react';
 import { useState } from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 
-import store from '../../images/store.png';
-import YourStoreModal from '../Modals/YourStoreModal';
+import StoreImage from '../../images/StoreImage.png';
+import StoreUpdateModal from '../Modals/StoreUpdateModal';
+import StoreTrashButton from '../Buttons&Icons/StoreTrashButton';
 
 const YourStoreCard = () => {
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -17,7 +18,7 @@ const YourStoreCard = () => {
     <>
       {/* Store Modal */}
       {showUpdateModal && (
-        <YourStoreModal
+        <StoreUpdateModal
           showUpdateModal={showUpdateModal}
           modalShowing={modalShowing}
         />
@@ -29,10 +30,13 @@ const YourStoreCard = () => {
             // key={}
             style={{ width: '30rem' }}
             className='text-center'>
-            <Card.Img src={store} onClick={modalShowing} />
+            <Card.Img src={StoreImage} onClick={modalShowing} />
 
             <Card.Body>
-              <Card.Title>Store Name</Card.Title>
+              <Card.Title>
+                Store Name
+                <StoreTrashButton />
+              </Card.Title>
             </Card.Body>
           </Card>
         </Col>
