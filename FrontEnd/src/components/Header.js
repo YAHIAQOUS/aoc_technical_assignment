@@ -17,6 +17,7 @@ const Header = () => {
             <Nav.Link href='/stores'>Stores</Nav.Link>
             <Nav.Link href='/yourstore'>Your Store</Nav.Link>
             <Nav.Link href='/cart'>Cart</Nav.Link>
+            <Nav.Link href='/orders'>Orders</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
