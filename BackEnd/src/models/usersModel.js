@@ -63,14 +63,12 @@ users.virtual('token').get(function () {
 });
 
 // Get Capabilities for the User
-users.virtual(
-  'capabilities'.get(function () {
-    let acl = {
-      shopper: ['read', 'write'],
-      seller: ['read', 'write', 'edit', 'delete'],
-    };
-    return acl[this.role];
-  })
-);
+users.virtual('capabilities').get(function () {
+  let acl = {
+    shopper: ['read', 'write'],
+    seller: ['read', 'write', 'edit', 'delete'],
+  };
+  return acl[this.role];
+});
 
 module.exports = mongoose.model('users', users);

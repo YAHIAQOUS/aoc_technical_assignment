@@ -9,7 +9,8 @@ const cors = require('cors');
 // Create the Express App
 const app = express();
 
-const authRouter = require('./routers/auth-routes');
+const authRoutes = require('./routers/auth-routes');
+const apiRoutes = require('./routers/api_routes');
 
 //  Use CORS
 app.use(cors());
@@ -21,7 +22,9 @@ app.get('/', (req, res) => {
   res.send('Home Server Route');
 });
 
-app.use('/', authRouter);
+// Use Routes
+app.use('/', authRoutes);
+app.use('/', apiRoutes);
 
 // Error Handlers
 const not_found = require('./error-handlers/404');
