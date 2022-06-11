@@ -1,6 +1,6 @@
 # Agents On Cloud Technical Assignment
 
-## Author: Yahia Al-Qous
+## Author: Yahia Qous
 
 ## About Repo
 
