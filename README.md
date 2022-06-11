@@ -58,4 +58,4 @@ npm i
 npm start
 ```
 
-http://localhost:3000/
+Open this link on your browser http://localhost:3000/
