@@ -7,7 +7,7 @@ import { Card, Row, Col } from 'react-bootstrap';
 import StoreImage from '../../images/StoreImage.png';
 import StoreModal from '../Modals/StoreModal';
 
-const StoreCard = () => {
+const StoreCard = (props) => {
   const [showDetailModal, setShowDetailModal] = useState(false);
   const modalShowing = () => {
     setShowDetailModal(!showDetailModal);
@@ -20,23 +20,20 @@ const StoreCard = () => {
         <StoreModal
           showDetailModal={showDetailModal}
           modalShowing={modalShowing}
+          store={props.store}
         />
       )}
 
-      <Row lg={3}>
-        <Col>
-          <Card
-            // key={}
-            style={{ width: '30rem' }}
-            className='text-center'>
-            <Card.Img src={StoreImage} onClick={modalShowing} />
+      <Card
+        key={props.store._id}
+        style={{ width: '30rem' }}
+        className='text-center'>
+        <Card.Img src={props.store.image_link} onClick={modalShowing} />
 
-            <Card.Body>
-              <Card.Title>Store Name</Card.Title>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+        <Card.Body>
+          <Card.Title>{props.store.store_name}</Card.Title>
+        </Card.Body>
+      </Card>
     </>
   );
 };

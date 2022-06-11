@@ -13,19 +13,19 @@ const StoreModal = (props) => {
         show={props.showDetailModal}
         onHide={props.modalShowing}>
         <Modal.Header closeButton>
-          <Modal.Title>Store Name</Modal.Title>
+          <Modal.Title>{props.store.store_name}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
           {/* Store Items Details */}
           <Row>
-            <StoreItems />
+            {props.store.items[0] && <StoreItems items={props.store.items} />}
           </Row>
 
           {/* Store Details */}
           <Row>
             <Col style={{ position: 'fixed', bottom: '20px', width: '50%' }}>
-              <p>Phone Number:</p>
+              <p>Phone Number: {props.store.phone_number}</p>
             </Col>
           </Row>
         </Modal.Body>

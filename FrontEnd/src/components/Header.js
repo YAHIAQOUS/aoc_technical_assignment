@@ -3,9 +3,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
+// import { useSelector } from 'react-redux';
 
 const Header = () => {
+  const navigate = useNavigate();
+  // const { isSignIn, user } = useSelector((state) => state.authReducer);
+
   return (
     <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark' sticky='top'>
       <Container>
@@ -19,6 +24,22 @@ const Header = () => {
             <Nav.Link href='/cart'>Cart</Nav.Link>
             <Nav.Link href='/orders'>Orders</Nav.Link>
           </Nav>
+
+          <div>
+            {/* {!isSignIn && (
+              <Button onClick={() => navigate('/signin')}>SignIn</Button>
+            )} */}
+            {/* {isSignIn && (
+              <span>
+                <Chip
+                  avatar={
+                    <Avatar>{user.username.slice(0, 1).toUpperCase()}</Avatar>
+                  }
+                  label={user.username}
+                />
+              </span>
+            )} */}
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
